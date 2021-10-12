@@ -12,7 +12,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/yeikiu/vue3-md-blog.git"
+    "url": "https://github.com/6238729/blogtest.git"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
