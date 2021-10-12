@@ -1,5 +1,5 @@
 <template>
-  <PatchMeta :title="section ? section : 'Minimal Vue3 + Markdown blog engine'" />
+  <!-- <PatchMeta :title="section ? section : 'Minimal Vue3 + Markdown blog engine'" /> -->
 
   <div :style="`background-color: ${VUE_APP_MAIN_BG_CSS_COLOR}; color: ${VUE_APP_MAIN_TEXT_CSS_COLOR};`">
     <!-- HEADER -->
@@ -86,16 +86,16 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs, computed, inject } from 'vue'
-import BlogHeader from '@/components/BlogHeader.vue'
-import PatchMeta from '@/components/PatchMeta.vue'
-import paginate from '@/utils/paginate'
-import { PostIndex } from '@/types/PostIndex'
+import BlogHeader from '../components/BlogHeader.vue'
+// import PatchMeta from '../components/PatchMeta.vue'
+import paginate from '../utils/paginate'
+import { PostIndex } from '../types/PostIndex'
 
 const { VUE_APP_POSTS_PER_PAGE = 5, VUE_APP_MAIN_BG_CSS_COLOR = 'white', VUE_APP_MAIN_TEXT_CSS_COLOR = 'black' } = process.env
 
 export default defineComponent({
   components: {
-    PatchMeta,
+    // PatchMeta,
     BlogHeader
   },
   props: {

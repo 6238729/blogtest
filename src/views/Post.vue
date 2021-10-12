@@ -1,5 +1,5 @@
 <template>
-  <PatchMeta :title="title" />
+  <!-- <PatchMeta :title="title" /> -->
   <div class="container my-4 my-md-5">
     <span
       class="markdown-body"

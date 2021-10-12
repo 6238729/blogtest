@@ -1,29 +1,33 @@
 <template>
-  <PatchMeta />
+  <!-- <PatchMeta /> -->
   <!-- <NavBar
     :title="'📝 vue3-md-blog'"
     :sections="blogSections"
   /> -->
   <div>
-  <EblogTopBar/>
-          <div class="layout-main-container">
+    <EblogTopBar/>
+        <div class="layout-main-container">
           <div class="layout-main">
-  <!-- <Suspense>
-    <template #default>
-      <router-view />
-    </template>
-    <template #fallback>
-      <Loader />
-    </template>
-  </Suspense> -->
-  <router-view />
-  </div>
-  </div>
-  <Footer />
+            <Sidebar
+             />
+        <!-- <Suspense>
+          <template #default>
+            <router-view />
+          </template>
+          <template #fallback>
+            <Loader />
+          </template>
+        </Suspense> -->
+        <div :style="{ 'margin-left': sidebarWidth }">
+        <router-view />
+        </div>
+        </div>
+      </div>
+    <Footer />
   </div>
 </template>
 
-<script lang="ts">
+<script lang="">
 import { defineComponent, inject } from 'vue'
 import PatchMeta from './components/PatchMeta.vue'
 import EblogTopBar from './components/Elfinos1Topbar.vue'
@@ -33,17 +37,22 @@ import Footer from '@/components/Footer.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'github-markdown-css/github-markdown.css'
 
+import '@fortawesome/fontawesome-free/js/all'
+import Sidebar from './components/Elfinos2Sidebar.vue';
+import { sidebarWidth } from './components/state'
+
 export default defineComponent({
   components: {
     PatchMeta,
     EblogTopBar,
+    Sidebar,
     Loader,
     // NavBar,
     Footer
   },
   setup () {
     const blogSections = inject('blogSections', {})
-    return { blogSections }
+    return { blogSections, sidebarWidth }
   }
 })
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center my-5">
+  <div class="">
     <router-link
       :to="'/'"
       class="text-reset"

@@ -9,6 +9,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/:section/:id',
     component: () => import(/* webpackChunkName: "post" */ '../views/Post.vue'),
     props: true
+  },
+  {
+    path: '/dashboard',
+    // name: 'board1',
+    component: () => import('../views/board1.vue'),
+    props: true
   }
 ]
 
