@@ -1,39 +1,29 @@
 <template>
-  <div
-    class="text-center mt-5 py-2"
-    :style="`background-color: ${VUE_APP_FOOTER_BG_CSS_COLOR}; color: ${VUE_APP_FOOTER_TEXT_CSS_COLOR};`"
-  >
-    <router-link
-      :to="'/'"
-      class="text-reset"
-    >
-      <p class="m-0 p-0">
-        vue3-md-blog v{{ version }}
-      </p>
-    </router-link>
-    <p class="m-0 p-0">
-      Created with ❤️ by <a
-        href="https://github.com/yeikiu/"
-        target="_blank"
-        class="text-reset"
-      >JQ</a> © {{ new Date().toDateString().slice(-4) }}
-    </p>
+	<div class="layout-footer">
+    <!-- <img alt="Logo" :src="darkTheme ? 'images/logo-dark.svg' : 'images/logo-white.svg'" height="20" class="mr-2" /> -->
+    This is
+    <span class="font-medium ml-2">Hailey</span>
   </div>
 </template>
 
-<script language="ts">
-import { defineComponent } from 'vue'
-import { version } from '@/../package.json'
-
-const { VUE_APP_FOOTER_BG_CSS_COLOR = 'darkgray', VUE_APP_FOOTER_TEXT_CSS_COLOR = 'white' } = process.env
-
-export default defineComponent({
-  data () {
-    return {
-      version,
-      VUE_APP_FOOTER_BG_CSS_COLOR,
-      VUE_APP_FOOTER_TEXT_CSS_COLOR
-    }
-  }
-})
+<script>
+	export default {
+		name: "Footer",
+		computed: {
+    // darkTheme() {
+		// 		return this.$appState.theme.startsWith('saga');
+		// 	}
+		}
+	}
 </script>
+
+<style scoped>
+.layout-footer {
+    transition: margin-left $transitionDuration;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--surface-border);
+}
+</style>

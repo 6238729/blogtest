@@ -8,10 +8,10 @@
       <span v-else>Vue Sidebar</span>
     </h1>
 
-    <SidebarLink to="/" icon="pi pi-home">Home</SidebarLink>
-    <SidebarLink to="/dashboard" icon="pi pi-star-o">전체보기</SidebarLink>
-    <SidebarLink to="/analytics" icon="pi pi-moon">게시글 목록2</SidebarLink>
-    <SidebarLink to="/friends" icon="pi pi-sun">게시글 목록3</SidebarLink>
+    <SidebarLink to="/main" icon="pi pi-home">Home</SidebarLink>
+    <SidebarLink to="/" icon="pi pi-star-o">전체보기</SidebarLink>
+    <SidebarLink to="/category1" icon="pi pi-moon">카테고리1</SidebarLink>
+    <SidebarLink to="/category2" icon="pi pi-sun">카테고리2</SidebarLink>
     <SidebarLink to="/image" icon="pi pi-book">Images</SidebarLink>
 
     <span
@@ -23,7 +23,6 @@
     </span>
   </div>
 </template>
-
 
 <script>
 import SidebarLink from './Elfinos3SidebarLink.vue'
@@ -59,7 +58,7 @@ export default {
   left: 2rem;
   bottom: 2.4rem;
   padding: 1.5em;
-  
+
   transition: 0.3s ease;
 
   display: flex;

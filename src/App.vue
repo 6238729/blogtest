@@ -1,28 +1,22 @@
 <template>
-  <!-- <PatchMeta /> -->
-  <!-- <NavBar
-    :title="'📝 vue3-md-blog'"
-    :sections="blogSections"
-  /> -->
   <div>
+    <PatchMeta />
     <EblogTopBar/>
-        <div class="layout-main-container">
           <div class="layout-main">
-            <Sidebar
-             />
-        <!-- <Suspense>
+              <Suspense >
           <template #default>
+            <div class="layout-main-container">
+                          <Sidebar/>
+                          <div :style="{ 'margin-left': sidebarWidth }">
             <router-view />
+                          </div>
+            </div>
           </template>
           <template #fallback>
             <Loader />
           </template>
-        </Suspense> -->
-        <div :style="{ 'margin-left': sidebarWidth }">
-        <router-view />
-        </div>
-        </div>
-      </div>
+        </Suspense>
+   </div>
     <Footer />
   </div>
 </template>
@@ -32,13 +26,13 @@ import { defineComponent, inject } from 'vue'
 import PatchMeta from './components/PatchMeta.vue'
 import EblogTopBar from './components/Elfinos1Topbar.vue'
 import Loader from '@/components/Loader.vue'
-// import NavBar from '@/components/NavBar.vue'
+
 import Footer from '@/components/Footer.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'github-markdown-css/github-markdown.css'
 
 import '@fortawesome/fontawesome-free/js/all'
-import Sidebar from './components/Elfinos2Sidebar.vue';
+import Sidebar from './components/Elfinos2Sidebar.vue'
 import { sidebarWidth } from './components/state'
 
 export default defineComponent({
@@ -47,7 +41,6 @@ export default defineComponent({
     EblogTopBar,
     Sidebar,
     Loader,
-    // NavBar,
     Footer
   },
   setup () {
@@ -57,7 +50,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style lang="scss" >
 .layout-main-container {
     display: flex;
     flex-direction: column;
@@ -71,5 +64,4 @@ export default defineComponent({
 .layout-main {
     flex: 1 1 auto;
 }
-
 </style>

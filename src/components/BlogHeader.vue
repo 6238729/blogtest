@@ -5,12 +5,8 @@
       class="text-reset"
     >
       <p class="display-3">
-        vue3-md-blog
+        blog header
       </p>
-      <img
-        alt="Vue logo"
-        src="@/assets/logo.png"
-      >
     </router-link>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
     <div>
-        this is board1 page
+        this is Main page
     </div>
 </template>

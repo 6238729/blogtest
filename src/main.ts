@@ -4,11 +4,10 @@ import router from './router'
 import axios from 'redaxios'
 import { PostIndex } from './types/PostIndex'
 
-
-import 'primevue/resources/primevue.min.css';
+import 'primevue/resources/primevue.min.css'
 // import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
-import 'primevue/resources/themes/saga-blue/theme.css';
+import 'primeicons/primeicons.css'
+import 'primevue/resources/themes/saga-blue/theme.css'
 
 const dataPath = 'blog_store/posts_index.json'
 

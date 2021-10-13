@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/:section?',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
+    component: () => import(/* webpackChunkName: "home" */ '../views/All.vue'),
     props: true
   }, {
     path: '/:section/:id',
@@ -11,9 +11,9 @@ const routes: Array<RouteRecordRaw> = [
     props: true
   },
   {
-    path: '/dashboard',
+    path: '/main',
     // name: 'board1',
-    component: () => import('../views/board1.vue'),
+    component: () => import('../views/Main.vue'),
     props: true
   }
 ]
