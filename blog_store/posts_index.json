@@ -44,7 +44,7 @@
         "section": "category1",
         "date": "January 7, 2020",
         "title": "Posts are compiled with markdown-it",
-        "description": "You can simply edit your markdown files online and your blog will reflect the changes shortly after. Posts are compiled from Markdown to html in runtime Use inline html with bootstrap classes ready to go within your markdowns Support for GitHub Pages CSS and emojis category1 Headings h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading h1 Heading 8-) h2...",
+        "description": "You can simply edit your markdown files online and your blog will reflect the changes shortly after. Posts are compiled from Markdown to html in runtime Use inline html with bootstrap classes ready to go within your markdowns Support for GitHub Pages CSS and emojis Features Headings h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading h1 Heading 8-) h2...",
         "url": "blog_store/posts/category1/markdown-posts.md"
     },
     {
